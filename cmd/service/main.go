@@ -5,7 +5,6 @@ import (
 	"clownbot/internal/handlers"
 	"clownbot/internal/services/wordle"
 	"github.com/bwmarrin/discordgo"
-	"github.com/joho/godotenv"
 	"log"
 	"os"
 	"os/signal"
@@ -13,12 +12,6 @@ import (
 )
 
 func main() {
-	// Loading env vars from .env
-	if err := godotenv.Load(); err != nil {
-		log.Fatalf("can't start bot %v", err.Error())
-		return
-	}
-
 	// Getting bot token
 	botToken, exists := os.LookupEnv("BOT_TOKEN")
 	if !exists {
