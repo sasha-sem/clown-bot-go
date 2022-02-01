@@ -1,0 +1,32 @@
+{
+  "name": "ClownBotGo",
+  "description": "A bot for discord to play different games on server",
+  "keywords": [
+    "discord",
+    "go",
+    "wordle",
+    "bot"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/go"
+    }
+  ],
+  "website": "https://github.com/sasha-sem/clown-bot-go",
+  "repository": "hhttps://github.com/sasha-sem/clown-bot-go",
+  "env": {
+    "BOT_TOKEN": {
+      "description": "The Discord Bot Token",
+      "value": ""
+    },
+    "WORDS_PATH": {
+      "description": "Path to words file",
+      "value": "internal/services/wordle/words.txt"
+    }
+  },
+  "formation": {
+    "bot": {
+      "quantity": 1
+    }
+  }
+}
